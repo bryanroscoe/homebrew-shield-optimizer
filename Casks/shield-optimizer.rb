@@ -14,12 +14,14 @@ cask "shield-optimizer" do
     regex(/^v2-(\d+(?:\.\d+)+(?:-[A-Za-z0-9.]+)?)$/i)
   end
 
+  depends_on :macos
+
   app "Shield Optimizer.app"
 
   zap trash: [
     "~/Library/Application Support/com.shieldoptimizer.app",
+    "~/Library/Caches/com.shieldoptimizer.app",
     "~/Library/Preferences/com.shieldoptimizer.app.plist",
     "~/Library/WebKit/com.shieldoptimizer.app",
-    "~/Library/Caches/com.shieldoptimizer.app",
   ]
 end
