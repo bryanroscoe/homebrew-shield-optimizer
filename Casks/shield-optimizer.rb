@@ -1,6 +1,6 @@
 cask "shield-optimizer" do
-  version "2.0.0-beta.11"
-  sha256 "3fcd17cdf07f8978bfe25a6a29cf9dffcac60c396553c15c41ef35e03047c7cf"
+  version "2.0.0-beta.12"
+  sha256 "5883e91391179faa66df4b850db195d81959aafc29f2238d0ca12d0199bc0643"
 
   url "https://github.com/bryanroscoe/shield_optimizer/releases/download/v2-#{version}/Shield.Optimizer_#{version}_universal.dmg",
       verified: "github.com/bryanroscoe/shield_optimizer/"
