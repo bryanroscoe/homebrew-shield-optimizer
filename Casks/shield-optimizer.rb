@@ -2,10 +2,11 @@ cask "shield-optimizer" do
   version "2.2.0"
   sha256 "258b022019d44577f98bfbfcc29cbecc1404366519f4420e7cb7146396de0e95"
 
-  url "https://github.com/bryanroscoe/shield_optimizer/releases/download/v2-#{version}/Shield.Optimizer_#{version}_universal.dmg",
+  url "https://github.com/bryanroscoe/shield_optimizer/releases/download/v2-#{version}/ATV.Optimizer_#{version}_universal.dmg",
       verified: "github.com/bryanroscoe/shield_optimizer/"
+  name "ATV Optimizer"
   name "Shield Optimizer"
-  desc "Debloat and tune Android TV devices via ADB"
+  desc "Debloat and tune Android TV devices via ADB (formerly Shield Optimizer)"
   homepage "https://github.com/bryanroscoe/shield_optimizer"
 
   livecheck do
@@ -16,7 +17,7 @@ cask "shield-optimizer" do
 
   depends_on :macos
 
-  app "Shield Optimizer.app"
+  app "ATV Optimizer.app"
 
   postflight do
     # Builds are unsigned — Apple Developer ID is $99/yr we're not paying.
@@ -24,8 +25,24 @@ cask "shield-optimizer" do
     # trip Gatekeeper on first launch; strip it here so users can open the
     # app normally. Equivalent to `xattr -dr com.apple.quarantine`.
     system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Shield Optimizer.app"],
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/ATV Optimizer.app"],
                    sudo: false
+  end
+
+  caveats do
+    <<~EOS
+      Shield Optimizer is now called ATV Optimizer. The cask token is unchanged
+      (`brew upgrade --cask shield-optimizer` keeps working), but the installed
+      bundle is now "#{appdir}/ATV Optimizer.app".
+
+      Your settings, saved snapshots and downloaded platform-tools are untouched:
+      the app identifier and its data folder did not change.
+
+      Homebrew leaves the old bundle behind on the first upgrade. Once ATV
+      Optimizer opens, you can delete it:
+
+        rm -rf "#{appdir}/Shield Optimizer.app"
+    EOS
   end
 
   zap trash: [
