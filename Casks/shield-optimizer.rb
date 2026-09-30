@@ -38,8 +38,8 @@ cask "shield-optimizer" do
       Your settings, saved snapshots and downloaded platform-tools are untouched:
       the app identifier and its data folder did not change.
 
-      Homebrew leaves the old bundle behind on the first upgrade. Once ATV
-      Optimizer opens, you can delete it:
+      Homebrew removes the old bundle it installed. If a copy installed some
+      other way (for example from the DMG) is still there, you can delete it:
 
         rm -rf "#{appdir}/Shield Optimizer.app"
     EOS
