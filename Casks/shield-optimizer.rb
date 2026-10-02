@@ -2,8 +2,7 @@ cask "shield-optimizer" do
   version "2.3.0"
   sha256 "72e02d12f184cf7a20ca1e340049573e6a32132cfd9fcc5716da97bada527de1"
 
-  url "https://github.com/bryanroscoe/shield_optimizer/releases/download/v2-#{version}/ATV.Optimizer_#{version}_universal.dmg",
-      verified: "github.com/bryanroscoe/shield_optimizer/"
+  url "https://github.com/bryanroscoe/shield_optimizer/releases/download/v2-#{version}/ATV.Optimizer_#{version}_universal.dmg"
   name "ATV Optimizer"
   name "Shield Optimizer"
   desc "Debloat and tune Android TV devices via ADB (formerly Shield Optimizer)"
