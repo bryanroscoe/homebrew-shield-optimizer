@@ -7,9 +7,9 @@ cask "shield-optimizer@2.0.0" do
   desc "Debloat and tune Android TV devices via ADB"
   homepage "https://github.com/bryanroscoe/shield_optimizer"
 
-  # Pinned version — no livecheck. Use the unversioned `shield-optimizer` cask
+  # Pinned version — no livecheck. Use the unversioned `atv-optimizer` cask
   # to track the latest release.
-  conflicts_with cask: "bryanroscoe/shield-optimizer/shield-optimizer"
+  conflicts_with cask: "bryanroscoe/shield-optimizer/atv-optimizer"
 
   depends_on :macos
 
