@@ -40,6 +40,7 @@ cask "atv-optimizer" do
     "~/Library/Saved Application State/com.atvoptimizer.app.savedState",
     "~/Library/Saved Application State/com.shieldoptimizer.app.savedState",
     "~/Library/WebKit/com.atvoptimizer.app",
+    "~/Library/WebKit/com.atvoptimizer.app.unmigrated-*",
     "~/Library/WebKit/com.shieldoptimizer.app",
   ]
 
