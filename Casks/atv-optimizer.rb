@@ -1,6 +1,6 @@
 cask "atv-optimizer" do
-  version "2.5.0"
-  sha256 "faa1ec9de2b34108f97b7a7510abcf27d8d2e8d003ec74eb724a9713dfb3fedd"
+  version "2.5.1"
+  sha256 "c3da31dd74ba06d4fe9f2c1d59439c85aa9d167ee0a3676ff91e2a51970c6150"
 
   url "https://github.com/bryanroscoe/shield_optimizer/releases/download/v2-#{version}/ATV.Optimizer_#{version}_universal.dmg"
   name "ATV Optimizer"
